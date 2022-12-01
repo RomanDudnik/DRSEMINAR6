@@ -5,7 +5,7 @@
 //
 
 /*
-double PositiveNumbersInput(double A)
+double PositiveNumbersOutput(double A)
 {
     double size = A;
     double current = 0;
@@ -23,7 +23,7 @@ Console.WriteLine("Input how many numbers you will enter: ");
 double amount = Convert.ToInt32(Console.ReadLine());
 if (amount < 0)
     amount *= -1;                                      // на случай введения отрицательного числа
-double positiveNums = PositiveNumbersInput(amount);
+double positiveNums = PositiveNumbersOutput(amount);
 Console.WriteLine($"The amount of numbers you entered greater than 0 is {positiveNums} ");
 */
 
@@ -41,7 +41,7 @@ Console.WriteLine($"The amount of numbers you entered greater than 0 is {positiv
 // Запросить у пользователя коэфициенты (k1, k2, b1, b2)
 
 /*
-void IntersectionPoint(double k1, double k2, double b1, double b2)
+void IntersectionPoint(double b1, double k1, double b2, double k2)
 {
     double xPoint=0;
     double yPoint=0;
@@ -58,14 +58,14 @@ void IntersectionPoint(double k1, double k2, double b1, double b2)
         }
 }
 
-Console.WriteLine("Input the first point of the AB line: ");
-double A = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Input the second point of the AB line: ");
-double B = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Input the first point of the CD line: ");
-double C = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Input the first point of the CD line: ");
-double D = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the first point x: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the first point y: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the second point x: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the second point y: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
 
-IntersectionPoint(A, B, C, D);
+IntersectionPoint(x1, y1, x2, y2);
 */
