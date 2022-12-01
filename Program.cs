@@ -4,14 +4,15 @@
 //1, -7, 567, 89, 223-> 3
 //
 
-int PositiveNumbersInput(int A)
+/*
+double PositiveNumbersInput(double A)
 {
-    int size = A;
-    int current = 0;
-    for (int i = 0; i < size; i++)
+    double size = A;
+    double current = 0;
+    for (double i = 0; i < size; i++)
     {
         Console.Write("Input your number: ");
-        int num = Convert.ToInt32(Console.ReadLine());
+        double num = Convert.ToInt32(Console.ReadLine());
         if (num > 0)
         current += 1;
     }
@@ -19,13 +20,12 @@ int PositiveNumbersInput(int A)
 }
 
 Console.WriteLine("Input how many numbers you will enter: ");
-int amount = Convert.ToInt32(Console.ReadLine());
-int positiveNums = PositiveNumbersInput(amount);
-
+double amount = Convert.ToInt32(Console.ReadLine());
+if (amount < 0)
+    amount *= -1;                                      // на случай введения отрицательного числа
+double positiveNums = PositiveNumbersInput(amount);
 Console.WriteLine($"The amount of numbers you entered greater than 0 is {positiveNums} ");
-
-
-
+*/
 
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
 //заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
@@ -38,5 +38,34 @@ Console.WriteLine($"The amount of numbers you entered greater than 0 is {positiv
 // x (k1 - k2) = b2 - b1 => x_____  (в программе будет только x)
 
 // k1 and k2 если они равны, то линии паралельны (соотв. точки пересечения нет)
-// Запросить у пользователя коэфициенты (k1, k2, k3, k4)
+// Запросить у пользователя коэфициенты (k1, k2, b1, b2)
 
+/*
+void IntersectionPoint(double k1, double k2, double b1, double b2)
+{
+    double xPoint=0;
+    double yPoint=0;
+    if (b1 == b2 && k1 == k2) 
+        Console.WriteLine("Straight lines match");
+    else 
+        if (k1 == k2) 
+            Console.WriteLine("The lines are parallel to each other");
+        else 
+        {
+            xPoint = (b2-b1) / (k1-k2);
+            yPoint = k1 * xPoint + b1;
+            Console.WriteLine($"Сrossing point  ({xPoint} ; {yPoint})");
+        }
+}
+
+Console.WriteLine("Input the first point of the AB line: ");
+double A = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the second point of the AB line: ");
+double B = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the first point of the CD line: ");
+double C = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the first point of the CD line: ");
+double D = Convert.ToDouble(Console.ReadLine());
+
+IntersectionPoint(A, B, C, D);
+*/
