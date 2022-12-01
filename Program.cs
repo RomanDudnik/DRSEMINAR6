@@ -4,6 +4,27 @@
 //1, -7, 567, 89, 223-> 3
 //
 
+int PositiveNumbersInput(int A)
+{
+    int size = A;
+    int current = 0;
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write("Input your number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        if (num > 0)
+        current += 1;
+    }
+    return current;
+}
+
+Console.WriteLine("Input how many numbers you will enter: ");
+int amount = Convert.ToInt32(Console.ReadLine());
+int positiveNums = PositiveNumbersInput(amount);
+
+Console.WriteLine($"The amount of numbers you entered greater than 0 is {positiveNums} ");
+
+
 
 
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
